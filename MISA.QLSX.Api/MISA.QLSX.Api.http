@@ -1,0 +1,6 @@
+@MISA.QLSX.Api_HostAddress = http://localhost:5291
+
+GET {{MISA.QLSX.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
