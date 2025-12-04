@@ -22,6 +22,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <returns>Danh sách vai trò</returns>
         /// Created: DuyLC(29/11/2025)
+        /// Test
         [HttpGet]
         public async Task<IActionResult> Get()
         {
