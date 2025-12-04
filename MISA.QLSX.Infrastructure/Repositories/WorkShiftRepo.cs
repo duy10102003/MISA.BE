@@ -132,10 +132,11 @@ namespace MISA.QLSX.Infrastructure.Repositories
                             WHERE LOWER(work_shift_code) = LOWER(@code)
                               AND is_deleted = 0
                               AND (@excludeId IS NULL OR work_shift_id <> @excludeId)
-                        )";
+                        ) AS exists_result";
 
             using var connection = new MySqlConnection(_connection);
-            return await connection.ExecuteScalarAsync<bool>(sql, new { code, excludeId });
+            var result = await connection.QueryFirstOrDefaultAsync<int>(sql, new { code, excludeId });
+            return result == 1;
         }
 
         public async Task<int> UpdateStatusAsync(IEnumerable<Guid> ids, int isActive, Guid modifiedBy)
