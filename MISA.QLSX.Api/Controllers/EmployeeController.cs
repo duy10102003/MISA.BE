@@ -20,7 +20,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="id">id của nhân viên</param>
         /// <returns>thoogn tin của nhân viên</returns>
-        /// Created: TuanDQ(17/11/2025)
+        /// Created: DuyLC(29/11/2025)
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
