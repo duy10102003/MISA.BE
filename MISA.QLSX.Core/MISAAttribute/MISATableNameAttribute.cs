@@ -8,8 +8,8 @@ namespace MISA.QLSX.Core.MISAAttribute
 {
     /// <summary>
     /// Setup mapping tên bảng trong database
-    /// Created by: TuanDQ (15/11/2025)
-    /// </summary>
+    /// Created by: DuyLC(29/11/2025)
+    /// 
     [AttributeUsage(AttributeTargets.Class)]
     public class MISATableNameAttribute : Attribute
     {

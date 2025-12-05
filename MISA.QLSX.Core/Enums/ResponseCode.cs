@@ -36,7 +36,7 @@ namespace MISA.QLSX.Core.Enums
         NotFound = 404,
 
         /// <summary>
-        /// Xung đột dữ liệu (ví dụ: mã đã tồn tại)
+        /// Xung đột dữ liệu (vd: mã đã tồn tại)
         /// </summary>
         Conflict = 409,
 
