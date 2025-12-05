@@ -272,7 +272,7 @@ namespace MISA.QLSX.Infrastructure.Repositories
 
                 switch (filter.Operator.ToLower())
                 {
-                    // Text operators
+                    
                     case "contains":
                         if (isTextColumn && !string.IsNullOrWhiteSpace(filter.Value))
                         {
@@ -385,7 +385,7 @@ namespace MISA.QLSX.Infrastructure.Repositories
                         }
                         break;
 
-                    // Time/Number operators
+                    
                     case "greater_than":
                         if (isTimeColumn && !string.IsNullOrWhiteSpace(filter.Value))
                         {

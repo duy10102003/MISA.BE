@@ -25,7 +25,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="request">Đối tượng chứa thông tin phân trang, tìm kiếm và sắp xếp</param>
         /// <returns>Danh sách ca làm việc có phân trang</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpPost("get-all")]
         public async Task<IActionResult> GetAll([FromBody] WorkShiftFilterDtoRequest request)
         {
@@ -53,7 +53,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -62,7 +62,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="id">ID của ca làm việc cần lấy</param>
         /// <returns>Thông tin chi tiết ca làm việc</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpGet("{id}")]
         public async Task<IActionResult> GetDetail(Guid id)
         {
@@ -90,7 +90,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -100,7 +100,7 @@ namespace MISA.QLSX.Api.Controllers
         /// <param name="code">Mã ca làm việc cần kiểm tra</param>
         /// <param name="excludeId">ID ca làm việc cần loại trừ (dùng khi cập nhật)</param>
         /// <returns>True nếu mã đã tồn tại, False nếu chưa tồn tại</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpGet("check-code")]
         public async Task<IActionResult> CheckCode([FromQuery] string code, [FromQuery] Guid? excludeId = null)
         {
@@ -121,7 +121,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -130,7 +130,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="request">Thông tin ca làm việc cần tạo</param>
         /// <returns>ID của ca làm việc vừa tạo (Status 201)</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpPost("create")]
         public async Task<IActionResult> CreateWorkShift([FromBody] WorkShiftCreateDto request)
         {
@@ -166,7 +166,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -176,7 +176,7 @@ namespace MISA.QLSX.Api.Controllers
         /// <param name="id">ID của ca làm việc cần cập nhật</param>
         /// <param name="request">Thông tin ca làm việc cần cập nhật</param>
         /// <returns>Số lượng bản ghi đã cập nhật</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateWorkShift(Guid id, [FromBody] WorkShiftUpdateDto request)
         {
@@ -220,7 +220,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -229,7 +229,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="id">ID của ca làm việc cần xóa</param>
         /// <returns>Số lượng bản ghi đã xóa</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -257,7 +257,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -266,7 +266,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="request">Đối tượng chứa danh sách ID các ca làm việc cần xóa</param>
         /// <returns>Số lượng bản ghi đã xóa</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpDelete("multiple-delete")]
         public async Task<IActionResult> DeleteMany([FromBody] WorkShiftDeleteManyDto request)
         {
@@ -294,7 +294,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -303,7 +303,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="request">Đối tượng chứa danh sách ID và trạng thái mới</param>
         /// <returns>Số lượng bản ghi đã cập nhật</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpPut("status")]
         public async Task<IActionResult> UpdateStatus([FromBody] WorkShiftBulkStatusDto request)
         {
@@ -331,7 +331,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
@@ -340,7 +340,7 @@ namespace MISA.QLSX.Api.Controllers
         /// </summary>
         /// <param name="request">Đối tượng chứa thông tin lọc để xuất dữ liệu</param>
         /// <returns>File CSV chứa danh sách ca làm việc</returns>
-        /// Created: Auto
+        /// Created by DuyLC(04/12/2025)
         [HttpPost("export")]
         public async Task<IActionResult> Export([FromBody] WorkShiftFilterDtoRequest request)
         {
@@ -371,7 +371,7 @@ namespace MISA.QLSX.Api.Controllers
             }
             finally
             {
-                // Cleanup nếu cần
+                // 
             }
         }
 
